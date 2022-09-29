@@ -18,6 +18,9 @@ class AUE5ThirdPersonExCharacter : public ACharacter
 	/** Follow camera */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera, meta = (AllowPrivateAccess = "true"))
 	class UCameraComponent* FollowCamera;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera, meta = (AllowPrivateAccess = "true"))
+	class UReadyPlayerMeComponent* ReadyPlayerMeComponent;
 public:
 	AUE5ThirdPersonExCharacter();
 
