@@ -40,7 +40,7 @@ When you run the application and press Q the UI panel should display as below.
 
 While our avatars use a skeleton rig based on the Mixamo skeleton, it is possible to retarget animations using the UE4 and UE5 Mannequin skeletons so that they work with our Ready Player Me Avatars. For this example we did exactly that, to retarget animations from the UE5 Mannequn skeleton we first had to setup the IK Rig for the RPM skeleton. Right click in the asset browser and from the `Animation > IK Rig`, now we need to pick the `RPM_Mixamo_SkeletalMesh` skeletal mesh. To do this you need to open up the `UE4_Mannequin_Skeleton` asset located at `Content > Mannequin > Character > Mesh`. 
 
-Different skeletons have different amount of bones, we need to create **IK Chains** so that the chains will match the chains in IK Rig of the UE5 Mannequin. We need to also add **IK Solver** for better retargeting. The same IK Rig can be used to retarget animations between Meshes that have different skeletons. You can find more details about UE5 retargeting in the [official UE5 Documentation](https://docs.unrealengine.com/5.0/en-US/ik-rig-animation-retargeting-in-unreal-engine/).
+Different skeletons have different amount of bones, we need to create **IK Chains** so that the chains will match the chains in IK Rig of the UE5 Mannequin. We may also add **IK Solver** for better retargeting. The same IK Rig can be used to retarget animations between Meshes that have different skeletons. You can find more details about UE5 retargeting in the [official UE5 Documentation](https://docs.unrealengine.com/5.0/en-US/ik-rig-animation-retargeting-in-unreal-engine/).
 
 ![Screenshot 2022-10-06 142449](https://user-images.githubusercontent.com/108666572/194311983-97560467-1bae-49d9-a7e0-0a350bed877c.png)
 
@@ -56,16 +56,6 @@ We are almost there. Now we can retarget the animations. If you retarget an **An
 
 ![Screenshot 2022-10-06 142946](https://user-images.githubusercontent.com/108666572/194312920-bed36f10-174b-4f43-a7d5-844ade033f64.png)
 
-![img-retargeting-panel](https://user-images.githubusercontent.com/7085672/163196328-170b7e9d-fc30-47c5-8487-0e4d7c3fbbf2.png)
-
-In our case we will use the `ThirdPerson_AnimBP` located at `Content > Mannequin > Animations` as an example. Simply right click and select `Retarget Anim Blueprints > Duplicate Anim Blueprints and Retarget`. 
-
-![img-retarget-menu](https://user-images.githubusercontent.com/7085672/163198242-a774dbdd-b41b-46f7-ab2c-3d1d0af09441.png)
-
-This will bring up the Select Skeleton window, in here simply select the `RPM_Mixamo_Skeleton` asset and click retarget. 
-
-![img-select-skeleton](https://user-images.githubusercontent.com/7085672/163198391-ef5989e7-cda0-4cc5-8281-a6a515581a15.png)
-
 Once the process is complete we should end up with animations and/or animation blueprints that work with our Ready Player Me avatar.
 
 When we run the game we will notice that the feet of the character are stuck to the ground.This is because the default **Control Rig** uses bones specific to the Mannequin skeleton. We need to disable the IK from our animation blueprint. Open the animation blueprint and remove the control rig from the execution chain. There will be IK support in the upcoming versions of the SDK.
@@ -75,6 +65,10 @@ When we run the game we will notice that the feet of the character are stuck to 
 Make sure to assign the Override Physical Asset in the SkeletalMeshComponent of the character blueprint. You might encounter issues with shadows otherwise.
 
 ![Screenshot 2022-10-06 144007](https://user-images.githubusercontent.com/108666572/194314869-e4453faf-7ce8-420a-831f-0a94cffa0bb2.png)
+
+## Note
+
+Currently the runtime retargeting doesn't work with the loaded RPM avatars.
 
 ## Dependencies
 - Ready Player Me Unreal SDK 
