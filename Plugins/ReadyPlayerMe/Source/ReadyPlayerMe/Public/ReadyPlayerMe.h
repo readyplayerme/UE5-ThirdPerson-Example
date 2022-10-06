@@ -1,4 +1,4 @@
-// Copyright © 2021++ Ready Player Me
+// Copyright Epic Games, Inc. All Rights Reserved.
 
 #pragma once
 
