@@ -10,9 +10,10 @@
 	"DocsURL": "https://docs.readyplayer.me/integration-guides/unreal-engine-4",
 	"MarketplaceURL": "",
 	"SupportURL": "https://docs.readyplayer.me/integration-guides/unreal-engine-4",
-	"EngineVersion": "4.27.0",
 	"CanContainContent": true,
-	"Installed": true,
+	"IsBetaVersion": false,
+	"IsExperimentalVersion": false,
+	"Installed": false,
 	"Modules": [
 		{
 			"Name": "ReadyPlayerMe",
@@ -20,7 +21,10 @@
 			"LoadingPhase": "Default",
 			"WhitelistPlatforms": [
 				"Win64",
-				"Android"
+				"Mac",
+				"Linux",
+				"Android",
+				"IOS"
 			]
 		},
 		{
@@ -28,7 +32,9 @@
 			"Type": "Editor",
 			"LoadingPhase": "Default",
 			"WhitelistPlatforms": [
-				"Win64"
+				"Win64",
+				"Mac",
+				"Linux"
 			]
 		}
 	],
