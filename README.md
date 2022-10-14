@@ -58,9 +58,13 @@ We are almost there. Now we can retarget the animations. If you retarget an **An
 
 Once the process is complete we should end up with animations and/or animation blueprints that work with our Ready Player Me avatar.
 
-When we run the game we will notice that the feet of the character are stuck to the ground.This is because the default **Control Rig** uses bones specific to the Mannequin skeleton. We need to disable the IK from our animation blueprint. Open the animation blueprint and remove the control rig from the execution chain. There will be IK support in the upcoming versions of the SDK.
+When we run the game we will notice that the feet of the character are stuck to the ground.This is because the default **Control Rig** uses bones specific to the Mannequin skeleton. We need to disable the IK from our animation blueprint. Open the animation blueprint and remove the control rig from the execution chain. The RPM_Mixamo_Skeleton currently doesn't have the IK bones.
 
 ![Screenshot 2022-10-06 143729](https://user-images.githubusercontent.com/108666572/194314365-a24a88a2-2459-48e1-b513-31b03b917afb.png)
+
+There will be proper IK support in the upcoming versions of the SDK. For now if we want to test the IK, we can add virtual bones for the IK to our **RPM_Mixamo_Skeleton** (similar to the IK bones in UE4 Mannequin) and change the control rig in the animation blueprint to use **CR_RPM_BasicFootIK**.
+
+![Screenshot 2022-10-10 095350](https://user-images.githubusercontent.com/108666572/194822530-ef52c70e-7e7b-4e2a-95c8-82a16b48770b.png)
 
 Make sure to assign the Override Physical Asset in the SkeletalMeshComponent of the character blueprint. You might encounter issues with shadows otherwise.
 
