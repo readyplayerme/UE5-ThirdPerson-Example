@@ -1,3 +1,8 @@
+# This Project Will Not Be Maintained
+
+We unified all UE5 example projects into one project to make it easier for developers and reduce the amount of maintenance work.
+To get up-to-date examples use [Unreal Examples](https://github.com/readyplayerme/UnrealExamples) project instead.
+
 # Ready Player Me UE5 Third Person Character Example
 
 ![Screenshot 2022-10-06 141418](https://user-images.githubusercontent.com/108666572/194309906-d7dc5108-2cb4-4005-baf7-b0d88af69c50.png)
